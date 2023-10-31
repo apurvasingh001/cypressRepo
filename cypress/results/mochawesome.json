@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-09T08:43:57.426Z",
+    "end": "2023-10-09T08:44:53.388Z",
+    "duration": 55962,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8b9f0526-0c71-4efb-bc09-7931645e18dd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pomTestcy.js",
+      "file": "cypress\\e2e\\pomTestcy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "832646cf-ba0f-4a52-8b1c-88f0a47e2a56",
+          "title": "TestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC02",
+              "fullTitle": "TestSuite TC02",
+              "timedOut": null,
+              "duration": 55739,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\nloginPage.login(_example.default.username, _example.default.password, {\n  timeout: 10000\n});\ncy.get(':nth-child(1) > .oxd-main-menu-item').click();\ncy.get('.oxd-table-body').find('.oxd-table-row').eq(14) // Access a specific row\n.scrollIntoView().should('contain', 'tester');\ncy.get('.oxd-brand-banner > img').should('be.visible', {\n  timeout: 10000\n});\n//cy.screenshot()",
+              "err": {},
+              "uuid": "7a432514-9566-447c-82ea-a7b7605d7dc5",
+              "parentUUID": "832646cf-ba0f-4a52-8b1c-88f0a47e2a56",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7a432514-9566-447c-82ea-a7b7605d7dc5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 55739,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
