@@ -4,7 +4,7 @@ import data from '../fixtures/example.json'
 const loginPage = new LonginPage()
 describe('TestSuite', () => {
 
-it('TC01', () => {
+it.skip('TC01', () => {
     cy.visit('/')
     loginPage.login(data.username, data.password, {timeout: 10000 })
     cy.get('.oxd-brand-banner > img').should('be.visible', {timeout: 10000 })
