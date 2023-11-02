@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Change to the directory where your package.json is located
-                    dir('C:/Users/apurvasingh01/.jenkins/workspace/TestPipeline/') {
+                    dir('https://github.com/apurvasingh001/cypressRepo/tree/master/') {
                         // Install dependencies using npm
                         sh 'npm install'
                     }
@@ -16,7 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                script {
-                    dir('C:/Users/apurvasingh01/.jenkins/workspace/TestPipeline/') {
+                    dir('https://github.com/apurvasingh001/cypressRepo/tree/master/') {
                         // Run Cypress tests using npm
                         sh 'npx cypress open'
                     }
