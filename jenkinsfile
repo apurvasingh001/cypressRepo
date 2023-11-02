@@ -18,7 +18,7 @@ pipeline {
                script {
                     dir('C:\\Users\\apurvasingh01\\.jenkins\\workspace\\TestPipeline\\') {
                         // Run Cypress tests using npm
-                        bat 'npx cypress open'
+                        bat 'npx cypress run'
                     }
                 }
             }
