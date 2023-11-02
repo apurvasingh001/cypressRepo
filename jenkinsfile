@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm i'
+            }
+        }
+    stage('Test') {
+            steps {
+                sh 'npx cypress open'
+            }
+        }
+    stage('Deploy') {
+            steps {
+                echo 'Success deploying...'
+            }
+        }
+    }
+}
