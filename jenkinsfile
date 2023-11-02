@@ -4,25 +4,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    // Change to the directory where your package.json is located
-                    dir('https://github.com/apurvasingh001/cypressRepo/tree/master/') {
+                script {                   
                         // Install dependencies using npm
                         sh 'npm install'
                     }
                 }
             }
-        }
+        
         stage('Test') {
             steps {
                script {
-                    dir('https://github.com/apurvasingh001/cypressRepo/tree/master/') {
                         // Run Cypress tests using npm
                         sh 'npx cypress open'
                     }
                 }
             }
-        }
+        
         stage('Deploy') {
             steps {
                 echo 'Success deploying...'
