@@ -10,18 +10,20 @@ pipeline {
                         // Install dependencies using npm
                         sh 'npm install'
                     }
+                }
             }
         }
-    stage('Test') {
+        stage('Test') {
             steps {
                script {
                     dir('C:/Users/apurvasingh01/.jenkins/workspace/TestPipeline/') {
                         // Run Cypress tests using npm
                         sh 'npx cypress open'
                     }
+                }
             }
         }
-    stage('Deploy') {
+        stage('Deploy') {
             steps {
                 echo 'Success deploying...'
             }
