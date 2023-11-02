@@ -4,22 +4,25 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {                   
+                script {
+                    // Change to the directory where your package.json is located
+                    dir('C:\\Users\\apurvasingh01\\.jenkins\\workspace\\TestPipeline\\') {
                         // Install dependencies using npm
-                        sh 'npm install'
+                        bat 'npm install'
                     }
                 }
             }
-        
+        }
         stage('Test') {
             steps {
                script {
+                    dir('C:\\Users\\apurvasingh01\\.jenkins\\workspace\\TestPipeline\\') {
                         // Run Cypress tests using npm
-                        sh 'npx cypress open'
+                        bat 'npx cypress open'
                     }
                 }
             }
-        
+        }
         stage('Deploy') {
             steps {
                 echo 'Success deploying...'
