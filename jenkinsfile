@@ -4,22 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    // Change to the directory where your package.json is located
-                    
+                script {             
                         // Install dependencies using npm
-                        bat 'npm install'
-                    
+                        bat 'npm install'               
                 }
             }
         }
         stage('Test') {
             steps {
-               script {
-                    
+               script {                    
                         // Run Cypress tests using npm
-                        bat 'npx cypress run'
-                    
+                        bat 'npx cypress run'                   
                 }
             }
         }
